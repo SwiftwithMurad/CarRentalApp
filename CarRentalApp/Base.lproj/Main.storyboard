@@ -78,17 +78,72 @@
                     <view key="view" contentMode="scaleToFill" id="b8O-se-BZa">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for a car" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-rm-dz0">
+                                <rect key="frame" x="32" y="105" width="338" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5lX-r6-49W"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1uF-iJ-B1D">
+                                <rect key="frame" x="333.66666666666669" y="125.99999999999999" width="20.333333333333314" height="18.333333333333329"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4b-X5-jVG">
+                                <rect key="frame" x="0.0" y="791" width="402" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="6F2-EY-avY"/>
+                                    <tabBarItem systemItem="search" id="dHk-dq-lpt"/>
+                                    <tabBarItem title="Account" image="person.crop.circle" catalog="system" id="Y5W-RH-Tkz"/>
+                                </items>
+                            </tabBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zay-zS-55B">
+                                <rect key="frame" x="32" y="173" width="370" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MTF-Ir-KFg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ibT-fd-awL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ibT-fd-awL" firstAttribute="trailing" secondItem="Zay-zS-55B" secondAttribute="trailing" id="011-FN-Qmg"/>
+                            <constraint firstItem="G4b-X5-jVG" firstAttribute="leading" secondItem="ibT-fd-awL" secondAttribute="leading" id="JBF-7E-Pg1"/>
+                            <constraint firstItem="1uF-iJ-B1D" firstAttribute="trailing" secondItem="3WM-rm-dz0" secondAttribute="trailing" constant="-16" id="KM8-bC-GsN"/>
+                            <constraint firstItem="ibT-fd-awL" firstAttribute="trailing" secondItem="G4b-X5-jVG" secondAttribute="trailing" id="KRq-Uc-wVk"/>
+                            <constraint firstItem="ibT-fd-awL" firstAttribute="trailing" secondItem="3WM-rm-dz0" secondAttribute="trailing" constant="32" id="KpD-Km-qdy"/>
+                            <constraint firstItem="1uF-iJ-B1D" firstAttribute="centerY" secondItem="3WM-rm-dz0" secondAttribute="centerY" id="OEa-Tw-O2S"/>
+                            <constraint firstItem="Zay-zS-55B" firstAttribute="height" secondItem="b8O-se-BZa" secondAttribute="height" multiplier="0.146453" id="QiE-LA-3NY"/>
+                            <constraint firstItem="Zay-zS-55B" firstAttribute="leading" secondItem="3WM-rm-dz0" secondAttribute="leading" id="Ucn-tf-AHL"/>
+                            <constraint firstItem="3WM-rm-dz0" firstAttribute="leading" secondItem="ibT-fd-awL" secondAttribute="leading" constant="32" id="gRY-VX-p0w"/>
+                            <constraint firstItem="3WM-rm-dz0" firstAttribute="top" secondItem="ibT-fd-awL" secondAttribute="top" constant="43" id="gbz-L5-VBW"/>
+                            <constraint firstItem="Zay-zS-55B" firstAttribute="top" secondItem="3WM-rm-dz0" secondAttribute="bottom" constant="8" symbolic="YES" id="kfv-pw-EfF"/>
+                            <constraint firstItem="G4b-X5-jVG" firstAttribute="bottom" secondItem="ibT-fd-awL" secondAttribute="bottom" id="t3P-wa-CIX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryListCollection" destination="Zay-zS-55B" id="l28-Db-5jG"/>
+                        <outlet property="searchTextField" destination="3WM-rm-dz0" id="g4l-ns-iLR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebP-Ll-oaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="3"/>
+            <point key="canvasLocation" x="911.94029850746267" y="2.7459954233409607"/>
         </scene>
     </scenes>
     <resources>
         <image name="loginLogo" width="502" height="392"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
