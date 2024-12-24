@@ -16,7 +16,7 @@ extension CarList {
         return NSFetchRequest<CarList>(entityName: "CarList")
     }
 
-    @NSManaged public var catgegory: String?
+    @NSManaged public var category: String?
     @NSManaged public var engine: String?
     @NSManaged public var image: String?
     @NSManaged public var name: String?

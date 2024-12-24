@@ -11,8 +11,8 @@ class LoginController: UIViewController {
     let loginViewModel = LoginViewModel()
     let manager = UserDefaultsManager()
 
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var nameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

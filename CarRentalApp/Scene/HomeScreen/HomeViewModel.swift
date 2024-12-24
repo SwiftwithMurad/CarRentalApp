@@ -8,5 +8,5 @@
 import Foundation
 
 class HomeViewModel {
-    
+    let context = AppDelegate().persistentContainer.viewContext
 }
